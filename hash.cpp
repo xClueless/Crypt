@@ -9,7 +9,7 @@ using namespace std::experimental;
 namespace DistCrack
 {
 
-	experimental::optional<string> Hash::bruteforceCharset(const string& ciphertext, string charset, size_t maxLen)
+	optional<string> Hash::bruteforceCharset(const string& ciphertext, string charset, size_t maxLen)
 	{
 		cout << "Performing charset attack using the " << name() << " algorithm" << endl;
 
@@ -24,7 +24,7 @@ namespace DistCrack
 		return plaintext;
 	}
 
-	std::experimental::optional<string> Hash::bruteforceVector(const string& ciphertext, std::vector<string> wordset)
+	optional<string> Hash::bruteforceVector(const string& ciphertext, vector<string> wordset)
 	{
 		cout << "Performing vector attack using the " << name() << " algorithm" << endl;
 		optional<string> plaintext;
@@ -43,7 +43,7 @@ namespace DistCrack
 		return plaintext;
 	}
 
-	optional<string> Hash::bruteforcePermutations(const std::string& ciphertext, std::string set)
+	optional<string> Hash::bruteforcePermutations(const string& ciphertext, string set)
 	{
 		optional<string> plaintext;
 		bool hasNextPermutation = true;

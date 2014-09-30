@@ -17,7 +17,7 @@ namespace DistCrack
 	{
 		return "MD5";
 	}
-	std::string MD5::hash(const std::string& plaintext)
+	string MD5::hash(const string& plaintext)
 	{
 		unsigned char hash[MD5_DIGEST_LENGTH];
 		unsigned char plaintextCStr[plaintext.length()+1];

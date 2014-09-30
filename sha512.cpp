@@ -18,7 +18,7 @@ namespace DistCrack
 	{
 		return "SHA";
 	}
-	std::string SHA512::hash(const std::string& plaintext)
+	string SHA512::hash(const string& plaintext)
 	{
 		unsigned char hash[SHA512_DIGEST_LENGTH];
 		unsigned char plaintextCStr[plaintext.length()+1];
